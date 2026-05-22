@@ -99,30 +99,6 @@ body::before {
   50%      { filter: drop-shadow(0 0 22px rgba(255, 215, 0, 0.7)); }
 }
 
-/* Rotating rings around the rune — matches the runtime UI loader pattern.
-   Outer ring rotates clockwise; inner ring rotates counter-clockwise. */
-.banner-logo .ur-ring-outer,
-.hero-logo .ur-ring-outer,
-.footer-logo .ur-ring-outer {
-  transform-origin: 450.6px 400.2px;
-  transform-box: fill-box;
-  animation: ring-spin-cw 22s linear infinite;
-}
-.banner-logo .ur-ring-inner,
-.hero-logo .ur-ring-inner,
-.footer-logo .ur-ring-inner {
-  transform-origin: 450.6px 400.2px;
-  transform-box: fill-box;
-  animation: ring-spin-ccw 28s linear infinite;
-}
-@keyframes ring-spin-cw {
-  from { transform: rotate(0deg);   }
-  to   { transform: rotate(360deg); }
-}
-@keyframes ring-spin-ccw {
-  from { transform: rotate(0deg);    }
-  to   { transform: rotate(-360deg); }
-}
 
 .banner-title-block { display: flex; align-items: baseline; gap: 12px; }
 .banner-title {
