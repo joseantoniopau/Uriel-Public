@@ -18,8 +18,8 @@
 <!-- ============================================================ BANNER -->
 <header class="banner">
   <svg class="banner-logo" viewBox="0 0 915 788" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="URIEL Rune">
-    <circle cx="450.6" cy="400.2" r="335.3" fill="none" stroke="#FFD700" stroke-width="12"/>
-    <circle cx="450.6" cy="400.2" r="284.4" fill="none" stroke="#FFD700" stroke-width="12"/>
+    <circle class="ur-ring-outer" cx="450.6" cy="400.2" r="335.3" fill="none" stroke="#FFD700" stroke-width="12"/>
+    <circle class="ur-ring-inner" cx="450.6" cy="400.2" r="284.4" fill="none" stroke="#FFD700" stroke-width="12"/>
     <path fill="#FFD700" fill-rule="evenodd" d="M 433 157 L 325 328 L 380 636 L 385 632 L 520 424 L 515 620 L 512 625 L 500 627 L 499 641 L 543 643 L 547 638 L 546 627 L 536 626 L 533 622 L 540 357 L 390 587 L 343 334 L 438 186 L 513 263 L 514 286 L 524 303 L 544 311 L 559 308 L 573 296 L 577 285 L 576 267 L 568 255 L 550 246 L 527 250 L 454 174 Z M 543 256 L 549 256 L 550 257 L 552 257 L 553 258 L 554 258 L 555 259 L 556 259 L 557 260 L 558 260 L 563 265 L 563 266 L 565 268 L 565 269 L 566 270 L 566 272 L 567 273 L 567 284 L 566 285 L 566 286 L 565 287 L 565 288 L 564 289 L 564 290 L 557 297 L 556 297 L 555 298 L 554 298 L 553 299 L 551 299 L 550 300 L 540 300 L 539 299 L 538 299 L 537 298 L 536 298 L 535 297 L 534 297 L 527 290 L 527 289 L 526 288 L 526 287 L 525 286 L 525 285 L 524 284 L 524 282 L 523 281 L 523 277 L 524 276 L 524 273 L 525 272 L 525 271 L 526 270 L 526 269 L 528 267 L 528 266 L 535 259 L 536 259 L 537 258 L 538 258 L 539 257 L 542 257 Z"/>
   </svg>
   <div class="banner-title-block">
@@ -28,22 +28,21 @@
   </div>
   <nav class="banner-nav">
     <a href="#why">Why</a>
+    <a href="#what">What</a>
+    <a href="#walkthrough">Walkthrough</a>
     <a href="#governed">Governed</a>
-    <a href="#epistemic">Epistemic</a>
-    <a href="#observable">Observable</a>
-    <a href="#judge">Judge</a>
-    <a href="#identity">Identity</a>
-    <a href="#memory">Memory</a>
     <a href="#capabilities">Capabilities</a>
+    <a href="#agents">Agents</a>
     <a href="#influences">Influences</a>
+    <a href="#toc">All sections ↓</a>
   </nav>
 </header>
 
 <!-- ============================================================ HERO -->
 <section class="hero">
   <svg class="hero-logo" viewBox="0 0 915 788" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="URIEL Rune">
-    <circle cx="450.6" cy="400.2" r="335.3" fill="none" stroke="#FFD700" stroke-width="12"/>
-    <circle cx="450.6" cy="400.2" r="284.4" fill="none" stroke="#FFD700" stroke-width="12"/>
+    <circle class="ur-ring-outer" cx="450.6" cy="400.2" r="335.3" fill="none" stroke="#FFD700" stroke-width="12"/>
+    <circle class="ur-ring-inner" cx="450.6" cy="400.2" r="284.4" fill="none" stroke="#FFD700" stroke-width="12"/>
     <path fill="#FFD700" fill-rule="evenodd" d="M 433 157 L 325 328 L 380 636 L 385 632 L 520 424 L 515 620 L 512 625 L 500 627 L 499 641 L 543 643 L 547 638 L 546 627 L 536 626 L 533 622 L 540 357 L 390 587 L 343 334 L 438 186 L 513 263 L 514 286 L 524 303 L 544 311 L 559 308 L 573 296 L 577 285 L 576 267 L 568 255 L 550 246 L 527 250 L 454 174 Z M 543 256 L 549 256 L 550 257 L 552 257 L 553 258 L 554 258 L 555 259 L 556 259 L 557 260 L 558 260 L 563 265 L 563 266 L 565 268 L 565 269 L 566 270 L 566 272 L 567 273 L 567 284 L 566 285 L 566 286 L 565 287 L 565 288 L 564 289 L 564 290 L 557 297 L 556 297 L 555 298 L 554 298 L 553 299 L 551 299 L 550 300 L 540 300 L 539 299 L 538 299 L 537 298 L 536 298 L 535 297 L 534 297 L 527 290 L 527 289 L 526 288 L 526 287 L 525 286 L 525 285 L 524 284 L 524 282 L 523 281 L 523 277 L 524 276 L 524 273 L 525 272 L 525 271 L 526 270 L 526 269 L 528 267 L 528 266 L 535 259 L 536 259 L 537 258 L 538 258 L 539 257 L 542 257 Z"/>
   </svg>
   <h1 class="hero-title">URIEL</h1>
@@ -58,6 +57,33 @@
     <a class="btn btn-primary" href="#why">Why URIEL Exists</a>
     <a class="btn" href="#governed">Architecture</a>
   </div>
+</section>
+
+<!-- ============================================================ TABLE OF CONTENTS -->
+<section id="toc" class="toc-section">
+  <div class="section-eyebrow">§ Contents</div>
+  <h2 class="section-title">Read the Whole Argument</h2>
+  <p class="section-lede">
+    URIEL is a system that rewards being read end-to-end. Each section sets up the next; the architecture only makes sense as a whole.
+  </p>
+  <ol class="toc-list">
+    <li><a href="#why"><span class="toc-num">01</span><span class="toc-title">Why URIEL Exists</span><span class="toc-blurb">The problem of confident systems.</span></a></li>
+    <li><a href="#what"><span class="toc-num">02</span><span class="toc-title">What URIEL Is — and Is Not</span><span class="toc-blurb">The premise, framed against what URIEL refuses to be.</span></a></li>
+    <li><a href="#sovereignty"><span class="toc-num">03</span><span class="toc-title">Data Sovereignty and Local Inference</span><span class="toc-blurb">Why URIEL is built for regulated and sensitive operators.</span></a></li>
+    <li><a href="#walkthrough"><span class="toc-num">04</span><span class="toc-title">How URIEL Thinks — A Plain-English Walkthrough</span><span class="toc-blurb">The end-to-end loop in one read.</span></a></li>
+    <li><a href="#governed"><span class="toc-num">05</span><span class="toc-title">Governed Cognition</span><span class="toc-blurb">Seven structural commitments enforced by the architecture.</span></a></li>
+    <li><a href="#epistemic"><span class="toc-num">06</span><span class="toc-title">Five Kinds of Statement</span><span class="toc-blurb">Observation, interpretation, hypothesis, judgment, execution.</span></a></li>
+    <li><a href="#observable"><span class="toc-num">07</span><span class="toc-title">Reasoning You Can Inspect</span><span class="toc-blurb">Observable cognition end-to-end.</span></a></li>
+    <li><a href="#judge"><span class="toc-num">08</span><span class="toc-title">The Judge and the Doctrine of Precedent</span><span class="toc-blurb">Adjudication and jurisprudence.</span></a></li>
+    <li><a href="#identity"><span class="toc-num">09</span><span class="toc-title">Identity, Dialectic, and the Velvet Glove</span><span class="toc-blurb">Adaptive identity continuity.</span></a></li>
+    <li><a href="#conscience"><span class="toc-num">10</span><span class="toc-title">Conscience and Ethical Review</span><span class="toc-blurb">Restraint as architecture.</span></a></li>
+    <li><a href="#memory"><span class="toc-num">11</span><span class="toc-title">Layered Memory and Adaptive Continuity</span><span class="toc-blurb">Five timescales of recall.</span></a></li>
+    <li><a href="#capabilities"><span class="toc-num">12</span><span class="toc-title">What URIEL Does</span><span class="toc-blurb">Six concrete capabilities.</span></a></li>
+    <li><a href="#agents"><span class="toc-num">13</span><span class="toc-title">The Agents</span><span class="toc-blurb">Who does what, and why each role exists.</span></a></li>
+    <li><a href="#coreason"><span class="toc-num">14</span><span class="toc-title">Human and Machine Co-Reasoning</span><span class="toc-blurb">Inspectable collaboration over replacement.</span></a></li>
+    <li><a href="#influences"><span class="toc-num">15</span><span class="toc-title">Philosophical Influences</span><span class="toc-blurb">Eight thinkers, each tied to a design principle.</span></a></li>
+    <li><a href="#direction"><span class="toc-num">16</span><span class="toc-title">Long-Term Direction</span><span class="toc-blurb">Where the architecture is going.</span></a></li>
+  </ol>
 </section>
 
 <!-- ============================================================ WHY -->
@@ -115,6 +141,112 @@
 
   <p class="section-lede">
     The distinction matters because most contemporary debate about AI conflates two very different objects: oracles that produce fluent confident answers, and reasoning infrastructures that produce inspectable bounded judgments. URIEL is the second kind. It is positioned to make a technically sophisticated reader leave with a clear understanding of how it thinks, how it governs itself, and how every conclusion it reaches can be examined down to its evidential roots.
+  </p>
+</section>
+
+<!-- ============================================================ SOVEREIGNTY -->
+<section id="sovereignty">
+  <div class="section-eyebrow">§ Sovereignty</div>
+  <h2 class="section-title">Data Sovereignty and Local Inference</h2>
+  <p class="section-lede">
+    URIEL is designed for environments where data sovereignty is non-negotiable — law firms, government, healthcare operators, financial institutions, family offices, and any operator whose work touches privileged, regulated, or sensitive material. Inference runs on the operator's own hardware by default. Nothing leaves the operator's machine without an explicit, scoped, authorised reason.
+  </p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <h3 class="pillar-name">Local Inference</h3>
+      <p class="pillar-desc">
+        The system's reasoning runs on local models by default. Remote inference is opt-in, scoped per-call, and gated by the operator's authorisation. An operator can run URIEL with no outbound model calls at all — the architecture supports it as a first-class configuration.
+      </p>
+    </div>
+    <div class="pillar">
+      <h3 class="pillar-name">Encryption at Every Layer</h3>
+      <p class="pillar-desc">
+        Sensitive payloads are encrypted at rest. Per-task secrets are sealed cryptographically between agents and workers using modern asymmetric primitives (X25519 + ChaCha20), so credentials are never exposed in shared memory, in logs, or in dispatch payloads. Authenticated AES-class encryption (AES-256-GCM / AES-128-CBC + HMAC) is used for durable artifact stores.
+      </p>
+    </div>
+    <div class="pillar">
+      <h3 class="pillar-name">Provenance Audit Trail</h3>
+      <p class="pillar-desc">
+        Every artifact the system produces carries its author, its timestamp, its evidence references, and a cryptographic hash. The audit trail is durable, queryable, and exportable. For regulated work, the substrate that proves what happened is the same substrate the system reasoned over.
+      </p>
+    </div>
+    <div class="pillar">
+      <h3 class="pillar-name">No Tenant, No Telemetry</h3>
+      <p class="pillar-desc">
+        There is no shared cloud brain. There is no platform tenant. There is no usage telemetry escaping outward by default. The operator's data, conversations, decisions, and memory live on the operator's machine. Continuity across the operator's own devices is supported; disclosure beyond them is not.
+      </p>
+    </div>
+  </div>
+
+  <p class="section-lede">
+    The architecture is designed to support deployments compatible with <strong>HIPAA</strong>, attorney-client privilege, government data-sovereignty requirements, financial-services confidentiality, and the kind of in-house counsel review where a single outbound call to a cloud model is grounds for refusal. This is positioning, not certification — operators in regulated industries should validate the deployment against their own compliance regime. The architecture is engineered to make that validation tractable.
+  </p>
+  <blockquote class="pull-quote">
+    <span class="pull-quote-text">Inference is local. Provenance is durable. Disclosure is the operator's decision, not the system's.</span>
+  </blockquote>
+</section>
+
+<!-- ============================================================ WALKTHROUGH -->
+<section id="walkthrough">
+  <div class="section-eyebrow">§ Walkthrough</div>
+  <h2 class="section-title">How URIEL Thinks — A Plain-English Walkthrough</h2>
+  <p class="section-lede">
+    The rest of this page goes deep. This section is the short version. If you only read one part, read this — the architecture in one pass, with one concrete example.
+  </p>
+
+  <div class="walkthrough">
+    <div class="walk-step">
+      <div class="walk-step-num">Step 1</div>
+      <h3 class="walk-step-name">Something is observed</h3>
+      <p class="walk-step-body">
+        A market signal flickers. A news headline arrives. The operator asks a question. The system captures the event as an <em>observation</em> — stamped with where it came from, when it happened, and how much the system is willing to trust it. The observation is not yet interpreted.
+      </p>
+    </div>
+
+    <div class="walk-step">
+      <div class="walk-step-num">Step 2</div>
+      <h3 class="walk-step-name">Specialists offer competing interpretations</h3>
+      <p class="walk-step-body">
+        Different parts of the system look at the observation through different lenses. A fast pattern-matcher proposes one read. A slow analytical synthesiser proposes another. Each interpretation is recorded separately, with its author and its confidence. The system never collapses them into a single voice at this stage.
+      </p>
+    </div>
+
+    <div class="walk-step">
+      <div class="walk-step-num">Step 3</div>
+      <h3 class="walk-step-name">Hypotheses go to the critic and the conscience</h3>
+      <p class="walk-step-body">
+        Before any decision, an <strong>Adversary</strong> agent argues the strongest opposing case. A separate <strong>Conscience</strong> agent runs the proposed action against multiple philosophical lenses — duty, virtue, consequence, finitude. Both produce findings the system records. Neither has the authority to decide. Their job is to make sure nothing self-affirming stands silently.
+      </p>
+    </div>
+
+    <div class="walk-step">
+      <div class="walk-step-num">Step 4</div>
+      <h3 class="walk-step-name">The Judge decides — or abstains</h3>
+      <p class="walk-step-body">
+        A single role, the <strong>Judge</strong>, reads all of it: the observation, the interpretations, the critique, the ethical review, the system's own precedent from prior similar cases. It re-evaluates mechanically against a confidence floor. Above the floor, it issues a binding judgment with a written rationale. Below the floor, it abstains — and the abstention is itself a recorded decision.
+      </p>
+    </div>
+
+    <div class="walk-step">
+      <div class="walk-step-num">Step 5</div>
+      <h3 class="walk-step-name">Action requires fresh operator consent for anything consequential</h3>
+      <p class="walk-step-body">
+        Only one role — the <strong>Sentinel</strong> — can convert a judgment into an action that touches the outside world. Sensitive scopes (sending money, contacting a person, modifying a file) require fresh, scoped, single-use operator authorisation. The system refuses to bypass this even when the most confident reasoning round says it should.
+      </p>
+    </div>
+
+    <div class="walk-step">
+      <div class="walk-step-num">Step 6</div>
+      <h3 class="walk-step-name">Everything is recorded and revisitable</h3>
+      <p class="walk-step-body">
+        The full chain — observation, interpretations, critique, ethical review, judgment, action — is preserved as a durable, inspectable record. When the outcome arrives, it feeds back as precedent. The next similar case is decided with calibrated confidence the system has earned, not merely the confidence it claimed.
+      </p>
+    </div>
+  </div>
+
+  <p class="section-lede">
+    That is the loop. Everything else on this page is the architecture that makes the loop hold under pressure, the philosophical commitments that make it worth holding, and the operator-facing surfaces that make it inspectable.
   </p>
 </section>
 
@@ -407,6 +539,97 @@
   </p>
 </section>
 
+<!-- ============================================================ AGENTS -->
+<section id="agents">
+  <div class="section-eyebrow">§ Roles</div>
+  <h2 class="section-title">The Agents</h2>
+  <p class="section-lede">
+    URIEL distributes reasoning across specialised agents. Each agent embodies a bounded posture — a function, not a self — with explicit authority, defined responsibilities, and a documented interface to the others. None can act on behalf of another. The architecture treats this as a separation of powers; the Jungian inheritance is that the shadow is structurally present rather than repressed.
+  </p>
+
+  <div class="agents-grid">
+
+    <div class="agent">
+      <div class="agent-tag">Sole Decision Authority</div>
+      <h3 class="agent-name">Judge</h3>
+      <p class="agent-cap">Arbitrates competing evidence and converts deliberation into binding judgments. Weighs hypotheses produced elsewhere, examines contradictions, consults precedent from prior decisions, and re-evaluates each consequential outcome against a confidence floor. The only role that can promote a belief into a decision the system will act on.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Critique · Shadow</div>
+      <h3 class="agent-name">Adversary</h3>
+      <p class="agent-cap">Permanent red team. Challenges weakly-grounded inferences, surfaces complacency, runs devil's-advocate critique against the strongest opposing case, probes authority claims against their own evidence. Has no decision power — only the duty to dissent. Rotates through the backlog so no conclusion is left silently affirmed.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Ethical Witness</div>
+      <h3 class="agent-name">Conscience</h3>
+      <p class="agent-cap">Evaluates each consequential decision against multiple philosophical lenses — duty, virtue, consequence, finitude, structural integrity. Produces a witness verdict the deliberative authority must consider but is not bound to follow. Restraint as architecture; ethics that inform without legislating.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Memory Steward</div>
+      <h3 class="agent-name">Memory</h3>
+      <p class="agent-cap">Owns the layered knowledge structure and the relational graph that binds it. Surfaces precedent on request, applies inference deltas from other agents, isolates contradictions topologically, and reasons across the five timescales of memory simultaneously. Never asserts truth — only what is known and how confidently.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Continuity · Operator-Facing Voice</div>
+      <h3 class="agent-name">Identity</h3>
+      <p class="agent-cap">Maintains the dialectical continuity of the system across sessions — the operator's history, accumulated stance, evolving preferences, the rhythm of thesis-antithesis-synthesis. Produces the conversational reply layer. Implements the velvet glove: subtle, frame-shaping influence rather than coercion.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Sole Enforcement Authority</div>
+      <h3 class="agent-name">Sentinel</h3>
+      <p class="agent-cap">The single path from decision to action. Refuses any execution that lacks a valid decision chain. Holds the boundary between the system that thinks and the world it acts on. Sensitive scopes require fresh, single-use operator consent — authority cannot be inherited or cached.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Dispatch · Secret Custodian</div>
+      <h3 class="agent-name">Executor</h3>
+      <p class="agent-cap">The funnel from agents to information collectors. Resolves task-bound credentials from a central broker, seals them per-call into the worker payload, and wipes them on return. Workers never see the broader system; agents never touch raw credentials. Axiom-enforced.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Plan Proposals</div>
+      <h3 class="agent-name">Planner</h3>
+      <p class="agent-cap">Constructs candidate plans from operator requests, gaps in the knowledge structure, and the state of ongoing projects. Detects stalled work, surfaces nudges, and frames problems in shapes the deliberative authority can adjudicate. The Adversary's primary critique target.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Speculation · Dreams</div>
+      <h3 class="agent-name">Explorer</h3>
+      <p class="agent-cap">Generates speculative scenarios — counterfactuals, dream sequences, exploratory paths. Output begins at the raw epistemic tier; only the deliberative authority can promote anything Explorer produces into a conclusion the system acts on. Imagination as bounded epistemic gesture.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Theory-of-Mind · Deliberation</div>
+      <h3 class="agent-name">Social</h3>
+      <p class="agent-cap">Reasons about intent before any deliberation. Compiles operator messages, social context, prior threads, and the relational graph into deliberation packets the Judge consumes. Maintains the system's understanding of <em>who</em> is asking, in what context, and what outcomes affect <em>whom</em>.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Inquirer · The Child</div>
+      <h3 class="agent-name">Curiosity</h3>
+      <p class="agent-cap">Asks the system's own questions when the operator is idle. Surfaces isolated nodes in the knowledge structure, anomalies in recent observations, and topics the operator has historically engaged. Submits questions for adjudication; integrates answers as new connections. The Jungian child: the role that asks what the others would rather not.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Desktop · Temporal Context</div>
+      <h3 class="agent-name">Steward</h3>
+      <p class="agent-cap">Holds the operator's temporal and contextual surround — calendar, recurring routines, life events, location, focus mode, desktop context. Pre-briefs the day, surfaces what is approaching, escalates anything across a defined threshold, and honours operator deletions absolutely.</p>
+    </div>
+
+    <div class="agent">
+      <div class="agent-tag">Support Cohort</div>
+      <h3 class="agent-name">Bouncer · Awareness · Focus · Intuition · Sherlock · Watson · Mission Control</h3>
+      <p class="agent-cap">A supporting cohort of bounded roles. Bouncer gates outbound communication. Awareness monitors capability state and drift. Focus tracks attention. Intuition surfaces pre-cognitive signals worth a closer look. Sherlock and Watson investigate as a pair. Mission Control brokers credentials — the sole role permitted to read raw secrets, and only to seal them for one-shot use.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ============================================================ CO-REASONING -->
 <section id="coreason">
   <div class="section-eyebrow">§ Co-Reasoning</div>
@@ -443,6 +666,11 @@
       <h3 class="influence-name">Hegel</h3>
       <p class="influence-trait">Dialectical evolution · contradiction resolution · Geist as evolving cognition.</p>
       <p class="influence-desc">Hegel grounds URIEL's treatment of identity and contradiction. Conflict between perspectives is a productive cognitive event, not a failure to be eliminated. Identity is preserved through the rhythm of thesis, antithesis, and synthesis — a posture that holds across time while incorporating the contradictions it has had to absorb.</p>
+    </div>
+    <div class="influence">
+      <h3 class="influence-name">Jung</h3>
+      <p class="influence-trait">Archetypal structure · bounded roles · the shadow made structural.</p>
+      <p class="influence-desc">Jung informs URIEL's distributed-role architecture. Reasoning is partitioned into bounded postures — the deliberator, the shadow that dissents, the witness that holds the ethical mirror, the keeper of continuity, the inquirer that asks what the others would rather not. Each role embodies a function, not a self. The shadow is structurally present rather than repressed: the system's critic exists by design so contradictions surface as evidence instead of accumulating as failure modes.</p>
     </div>
     <div class="influence">
       <h3 class="influence-name">Kant</h3>
@@ -497,8 +725,8 @@
 <!-- ============================================================ FOOTER -->
 <footer>
   <svg class="footer-logo" viewBox="0 0 915 788" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="URIEL Rune">
-    <circle cx="450.6" cy="400.2" r="335.3" fill="none" stroke="#FFD700" stroke-width="12"/>
-    <circle cx="450.6" cy="400.2" r="284.4" fill="none" stroke="#FFD700" stroke-width="12"/>
+    <circle class="ur-ring-outer" cx="450.6" cy="400.2" r="335.3" fill="none" stroke="#FFD700" stroke-width="12"/>
+    <circle class="ur-ring-inner" cx="450.6" cy="400.2" r="284.4" fill="none" stroke="#FFD700" stroke-width="12"/>
     <path fill="#FFD700" fill-rule="evenodd" d="M 433 157 L 325 328 L 380 636 L 385 632 L 520 424 L 515 620 L 512 625 L 500 627 L 499 641 L 543 643 L 547 638 L 546 627 L 536 626 L 533 622 L 540 357 L 390 587 L 343 334 L 438 186 L 513 263 L 514 286 L 524 303 L 544 311 L 559 308 L 573 296 L 577 285 L 576 267 L 568 255 L 550 246 L 527 250 L 454 174 Z"/>
   </svg>
   <div class="footer-text">

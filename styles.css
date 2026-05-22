@@ -99,6 +99,31 @@ body::before {
   50%      { filter: drop-shadow(0 0 22px rgba(255, 215, 0, 0.7)); }
 }
 
+/* Rotating rings around the rune — matches the runtime UI loader pattern.
+   Outer ring rotates clockwise; inner ring rotates counter-clockwise. */
+.banner-logo .ur-ring-outer,
+.hero-logo .ur-ring-outer,
+.footer-logo .ur-ring-outer {
+  transform-origin: 450.6px 400.2px;
+  transform-box: fill-box;
+  animation: ring-spin-cw 22s linear infinite;
+}
+.banner-logo .ur-ring-inner,
+.hero-logo .ur-ring-inner,
+.footer-logo .ur-ring-inner {
+  transform-origin: 450.6px 400.2px;
+  transform-box: fill-box;
+  animation: ring-spin-ccw 28s linear infinite;
+}
+@keyframes ring-spin-cw {
+  from { transform: rotate(0deg);   }
+  to   { transform: rotate(360deg); }
+}
+@keyframes ring-spin-ccw {
+  from { transform: rotate(0deg);    }
+  to   { transform: rotate(-360deg); }
+}
+
 .banner-title-block { display: flex; align-items: baseline; gap: 12px; }
 .banner-title {
   font-family: 'Inter', sans-serif;
@@ -231,12 +256,16 @@ section {
 .section-title {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 36px;
   color: var(--accent);
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 16px;
-  text-shadow: 0 0 12px var(--accent-dim);
+  margin-bottom: 20px;
+  text-shadow: 0 0 18px rgba(255, 215, 0, 0.4), 0 0 36px rgba(255, 215, 0, 0.15);
+  line-height: 1.1;
+  border-left: 5px solid var(--accent);
+  padding-left: 22px;
+  margin-left: -22px;
 }
 .section-eyebrow {
   font-family: 'Inter', sans-serif;
@@ -390,6 +419,200 @@ section {
   color: var(--text-primary);
   line-height: 1.75;
   font-size: 15px;
+}
+
+/* ============================================================ TABLE OF CONTENTS */
+.toc-section { padding-top: 60px; padding-bottom: 60px; }
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 3px solid var(--accent);
+}
+.toc-list li {
+  border-bottom: 1px solid var(--border);
+}
+.toc-list li:nth-child(odd)  { border-right: 1px solid var(--border); }
+.toc-list a {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "num title" "num blurb";
+  gap: 4px 18px;
+  padding: 22px 24px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.toc-list a:hover {
+  background: rgba(255, 215, 0, 0.06);
+}
+.toc-list a:hover .toc-title { color: var(--accent); }
+.toc-num {
+  grid-area: num;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  align-self: center;
+  text-align: right;
+  opacity: 0.85;
+}
+.toc-title {
+  grid-area: title;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+.toc-blurb {
+  grid-area: blurb;
+  font-size: 12px;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* ============================================================ SOVEREIGNTY PILLARS */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 36px 0;
+}
+.pillar {
+  border: 3px solid var(--border-heavy);
+  background: var(--slate-mid);
+  padding: 28px 26px;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.pillar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(255,215,0,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.pillar:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 28px var(--accent-glow);
+}
+.pillar-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  text-shadow: 0 0 12px var(--accent-dim);
+  position: relative;
+}
+.pillar-desc {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.7;
+  position: relative;
+}
+
+/* ============================================================ WALKTHROUGH STEPS */
+.walkthrough {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 36px 0;
+  border: 3px solid var(--border-heavy);
+  background: var(--slate-mid);
+}
+.walk-step {
+  padding: 32px 32px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  transition: background 0.2s;
+}
+.walk-step:last-child { border-bottom: 0; }
+.walk-step:hover { background: rgba(255, 215, 0, 0.025); }
+.walk-step-num {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+.walk-step-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+  text-shadow: 0 0 12px var(--accent-dim);
+}
+.walk-step-body {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.75;
+}
+.walk-step-body strong {
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+/* ============================================================ AGENTS GRID */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 36px;
+}
+.agent {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 26px 24px;
+  position: relative;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.agent:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px var(--accent-glow);
+}
+.agent-tag {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.agent-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px var(--accent-dim);
+}
+.agent-cap {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+.agent-cap em {
+  color: var(--text-secondary);
+  font-style: italic;
 }
 
 /* ============================================================ CONTRAST (IS / IS NOT) */
@@ -852,4 +1075,19 @@ footer {
   .mem-name { font-size: 13px; }
   .influence { padding: 20px 18px; }
   .influence-name { font-size: 15px; letter-spacing: 2px; }
+  .section-title { font-size: 24px; letter-spacing: 2px; padding-left: 14px; margin-left: -14px; border-left-width: 4px; }
+  .toc-list { grid-template-columns: 1fr; }
+  .toc-list li:nth-child(odd) { border-right: 0; }
+  .toc-list a { grid-template-columns: 44px 1fr; padding: 16px 18px; gap: 4px 12px; }
+  .toc-num { font-size: 18px; }
+  .toc-title { font-size: 13px; letter-spacing: 1px; }
+  .toc-blurb { font-size: 11px; }
+  .pillar { padding: 22px 20px; }
+  .pillar-name { font-size: 15px; letter-spacing: 1px; }
+  .walk-step { padding: 24px 20px; }
+  .walk-step-name { font-size: 17px; letter-spacing: 1px; }
+  .walk-step-body { font-size: 14px; }
+  .agent { padding: 22px 20px; }
+  .agent-name { font-size: 18px; letter-spacing: 2px; }
+  .banner-nav { flex-wrap: wrap; }
 }
