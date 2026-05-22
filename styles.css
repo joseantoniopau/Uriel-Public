@@ -289,56 +289,129 @@ section {
   text-transform: uppercase;
 }
 
-/* ============================================================ CAPABILITIES */
-.capabilities {
+/* ============================================================ PRINCIPLES */
+.principles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  gap: 22px;
   margin-top: 40px;
 }
-.capability {
+.principle {
   border: 2px solid var(--border);
   background: var(--slate-mid);
-  padding: 28px 26px;
+  padding: 30px 28px;
   position: relative;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
-.capability:hover {
+.principle:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
   box-shadow: 0 0 22px var(--accent-glow);
+  transform: translateY(-2px);
 }
-.capability-icon {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 0 8px var(--accent-dim));
+.principle-num {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+  opacity: 0.85;
 }
-.capability-icon svg {
-  width: 100%;
-  height: 100%;
-}
-.capability-name {
+.principle-name {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
   font-size: 18px;
   color: var(--accent);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-shadow: 0 0 10px var(--accent-dim);
 }
-.capability-desc {
+.principle-desc {
   font-size: 14px;
   color: var(--text-primary);
   line-height: 1.7;
 }
-.capability-desc code {
-  background: var(--slate-light);
+
+/* ============================================================ ROLES */
+.roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+.role {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 26px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.role:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.role-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
   color: var(--accent);
-  padding: 1px 5px;
-  border-radius: 2px;
-  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.role-desc {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+/* ============================================================ PRACTICE ROWS */
+.practice {
+  margin-top: 30px;
+}
+.practice-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+.practice-row:first-of-type { border-top: 0; }
+.practice-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.practice-body {
+  color: var(--text-primary);
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+/* ============================================================ PULL QUOTES */
+.pull-quote {
+  margin: 56px auto 0;
+  max-width: 760px;
+  padding: 32px 28px;
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(255,215,0,0.06) 0%, transparent 70%);
+}
+.pull-quote-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(20px, 3vw, 28px);
+  color: var(--accent);
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-shadow: 0 0 18px var(--accent-dim);
+  display: inline-block;
 }
 
 /* ============================================================ AXIOMS */
@@ -502,6 +575,15 @@ footer {
   section { padding: 60px 20px; }
   .section-title { font-size: 22px; letter-spacing: 2px; }
   .subsystem { grid-template-columns: 1fr; gap: 14px; }
+  .practice-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+  .practice-name { font-size: 15px; }
+  .practice-body { font-size: 14px; }
+  .principle { padding: 22px 20px; }
+  .principle-name { font-size: 16px; letter-spacing: 1px; }
+  .role { padding: 20px 18px; }
+  .role-name { font-size: 14px; letter-spacing: 1px; }
+  .pull-quote { padding: 22px 18px; margin-top: 36px; }
+  .pull-quote-text { font-size: 18px; }
   .metric-value { font-size: 28px; }
   .code-tree { font-size: 11px; padding: 18px; }
 }
