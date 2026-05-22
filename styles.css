@@ -99,6 +99,44 @@ body::before {
   50%      { filter: drop-shadow(0 0 22px rgba(255, 215, 0, 0.7)); }
 }
 
+/* Runtime-UI loader rings — exact match to .uriel-tab-loader pattern from
+   src/uriel/web/templates/index.html (Phase 68 per-tab loading overlay).
+   Outer ring: dashed (42 18), slow clockwise 22s.
+   Inner ring: dashed (14 10), fast counter-clockwise 6s, thicker stroke.
+   Rune path: 2.6s breath (opacity + scale pulse).
+   transform-box:fill-box pivots around the circle's own center
+   regardless of the SVG viewBox — WKWebView-safe per the runtime comment. */
+.banner-logo .ur-ring-outer,
+.hero-logo .ur-ring-outer,
+.footer-logo .ur-ring-outer {
+  transform-box: fill-box;
+  transform-origin: center;
+  stroke-dasharray: 42 18;
+  animation: spin-ring-cw 22s linear infinite;
+}
+.banner-logo .ur-ring-inner,
+.hero-logo .ur-ring-inner,
+.footer-logo .ur-ring-inner {
+  transform-box: fill-box;
+  transform-origin: center;
+  stroke-dasharray: 14 10;
+  stroke-width: 14;
+  animation: spin-ring-ccw 6s linear infinite;
+}
+.banner-logo .ur-rune,
+.hero-logo .ur-rune,
+.footer-logo .ur-rune {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rune-breathe 2.6s ease-in-out infinite;
+}
+@keyframes spin-ring-cw  { from { transform: rotate(0deg);   } to { transform: rotate(360deg); } }
+@keyframes spin-ring-ccw { from { transform: rotate(360deg); } to { transform: rotate(0deg);   } }
+@keyframes rune-breathe {
+  0%, 100% { opacity: 0.92; transform: scale(1.00); }
+  50%      { opacity: 1.00; transform: scale(1.03); }
+}
+
 
 .banner-title-block { display: flex; align-items: baseline; gap: 12px; }
 .banner-title {
