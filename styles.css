@@ -841,6 +841,76 @@ section {
   background: var(--slate-dark);
 }
 
+/* ============================================================ COGNITIVE LIFECYCLE DIAGRAM */
+.lifecycle {
+  margin: 40px auto 24px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.lifecycle-step {
+  border: 3px solid var(--border-heavy);
+  background: var(--slate-mid);
+  padding: 18px 26px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: center;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  text-shadow: 0 0 12px var(--accent-dim);
+}
+.lifecycle-step:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 28px var(--accent-glow);
+  transform: translateX(2px);
+}
+.lifecycle-step::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255,215,0,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.lifecycle-arrow {
+  align-self: center;
+  width: 2px;
+  height: 26px;
+  background: linear-gradient(to bottom, var(--accent) 0%, var(--accent-dim) 100%);
+  position: relative;
+}
+.lifecycle-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--accent-dim);
+  border-bottom: 2px solid var(--accent-dim);
+}
+.lifecycle-step-num {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--text-tertiary);
+  display: block;
+  margin-bottom: 4px;
+  text-shadow: none;
+}
+@media (max-width: 720px) {
+  .lifecycle { max-width: 100%; }
+  .lifecycle-step { padding: 14px 18px; font-size: 12px; letter-spacing: 2px; }
+  .lifecycle-arrow { height: 20px; }
+}
+
 /* ============================================================ INFLUENCES */
 .influences {
   display: grid;
