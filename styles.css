@@ -392,6 +392,257 @@ section {
   font-size: 15px;
 }
 
+/* ============================================================ CONTRAST (IS / IS NOT) */
+.contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+.contrast-block {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 28px 26px;
+}
+.contrast-yes { border-left: 3px solid var(--accent); }
+.contrast-no  { border-left: 3px solid #ff4444; }
+.contrast-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.contrast-yes .contrast-label { color: var(--accent); }
+.contrast-no  .contrast-label { color: #ff5555; opacity: 0.85; }
+.contrast-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contrast-block li {
+  padding: 8px 0;
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.contrast-block li:last-child { border-bottom: 0; }
+
+/* ============================================================ COMMITMENTS LIST */
+.commitments {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.commitments li {
+  padding: 18px 22px;
+  background: var(--slate-mid);
+  border-left: 3px solid var(--accent);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.commitments li strong {
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ============================================================ FIVE LAYERS */
+.five-layers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 30px 0;
+}
+.layer {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 24px 22px;
+  position: relative;
+}
+.layer-num {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  color: var(--accent);
+  opacity: 0.18;
+  line-height: 1;
+}
+.layer-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.layer-desc {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+/* ============================================================ INSPECT LIST */
+.inspect-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.inspect-list li {
+  padding: 16px 20px;
+  background: var(--slate-mid);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.inspect-list li strong {
+  color: var(--accent);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ============================================================ MEMORY LAYERS */
+.memory-layers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 30px 0;
+}
+.mem-layer {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 24px 22px;
+}
+.mem-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.mem-desc {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* ============================================================ CAPABILITIES (utility) */
+.capabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 32px;
+}
+.capability {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 34px 30px;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.capability:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 22px var(--accent-glow);
+}
+.capability-tag {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.capability-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  text-shadow: 0 0 12px var(--accent-dim);
+}
+.capability-desc {
+  font-size: 15px;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.capability-desc:last-of-type { margin-bottom: 0; }
+.capability-tags-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.capability-tags-row span {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid var(--border-heavy);
+  color: var(--text-secondary);
+  background: var(--slate-dark);
+}
+
+/* ============================================================ INFLUENCES */
+.influences {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin: 30px 0;
+}
+.influence {
+  border: 2px solid var(--border);
+  background: var(--slate-mid);
+  padding: 26px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.influence:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.influence-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--accent);
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+.influence-trait {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.influence-desc {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
 /* ============================================================ PULL QUOTES */
 .pull-quote {
   margin: 56px auto 0;
@@ -586,4 +837,19 @@ footer {
   .pull-quote-text { font-size: 18px; }
   .metric-value { font-size: 28px; }
   .code-tree { font-size: 11px; padding: 18px; }
+  .contrast { grid-template-columns: 1fr; gap: 14px; }
+  .contrast-block { padding: 22px 20px; }
+  .inspect-list { grid-template-columns: 1fr; gap: 10px; }
+  .inspect-list li { padding: 14px 16px; font-size: 13px; }
+  .capability { padding: 24px 20px; }
+  .capability-name { font-size: 17px; letter-spacing: 1px; }
+  .capability-desc { font-size: 14px; }
+  .commitments li { padding: 14px 18px; font-size: 13px; }
+  .layer { padding: 18px 16px; }
+  .layer-num { font-size: 26px; }
+  .layer-name { font-size: 14px; letter-spacing: 1px; }
+  .mem-layer { padding: 18px 16px; }
+  .mem-name { font-size: 13px; }
+  .influence { padding: 20px 18px; }
+  .influence-name { font-size: 15px; letter-spacing: 2px; }
 }
