@@ -880,6 +880,35 @@ section {
   line-height: 1.65;
 }
 
+/* Concept · Architecture · Behaviour structure inside each influence card */
+.influence-meta {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 6px 14px;
+  margin-top: 14px;
+}
+.influence-meta dt {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  align-self: start;
+  padding-top: 3px;
+}
+.influence-meta dd {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+@media (max-width: 720px) {
+  .influence-meta { grid-template-columns: 1fr; gap: 2px 0; }
+  .influence-meta dt { padding-top: 8px; }
+  .influence-meta dd { padding-bottom: 4px; }
+}
+
 /* ============================================================ PULL QUOTES */
 .pull-quote {
   margin: 56px auto 0;
